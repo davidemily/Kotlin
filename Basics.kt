@@ -1,6 +1,6 @@
 
 fun main(args: Array<String>) {
-    val sample1: Byte = 0x3A.toByte(); //Couldn't find a specific unsigned Byte type    
+    val sample1: Byte = (0x3A and 0xFF).toByte(); 
     var sample2: Byte = 58.toByte();    
     var heartRate: Int = 85;    
     var deposits: Double = 135002796.00;    
@@ -10,6 +10,7 @@ fun main(args: Array<String>) {
     var lost: Boolean = true;    
     var expensive: Boolean = true;    
     var choice: Int = 2;    
+    val integral: Char = '\u222B';
     val greeting: String = "Hello";    
     var name: String = "Karen";
 
@@ -48,6 +49,8 @@ fun main(args: Array<String>) {
         3 -> "You chose 3."
         else -> "You made an unknown choice."
     })
+    
+    println(integral + " is an integral.")
     
     for (i in 5..10){
         println("i=" + i);
